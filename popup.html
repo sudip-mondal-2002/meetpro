@@ -2,20 +2,43 @@
 <html>
 <head>
     <title>Google Meet Scheduler</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
     <style>
-        /* Add your styles here */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+        .container {
+            width: 90%;
+            max-width: 600px;
+        }
     </style>
 </head>
 <body>
-<label for="godaddy-api-key">GoDaddy API Key:</label>
-<input type="text" id="godaddy-api-key" name="godaddy-api-key"/>
-
-<h1>Create Google Meet</h1>
-<label for="authuser">Auth User:</label>
-<input type="number" id="authuser" name="authuser"/>
-<label for="meet-name">Meeting Name:</label>
-<input type="text" id="meet-name" name="meet-name"/>
-<button id="create-meet">Create Meeting</button>
+<div class="container">
+    <h1 class="center-align">Create Google Meet</h1>
+    <div class="input-field">
+        <input type="text" id="godaddy-api-key" name="godaddy-api-key"/>
+        <label for="godaddy-api-key">GoDaddy API Key:</label>
+    </div>
+    <div class="input-field">
+        <input type="number" id="authuser" name="authuser"/>
+        <label for="authuser">Auth User:</label>
+    </div>
+    <div class="input-field">
+        <input type="text" id="meet-name" name="meet-name"/>
+        <label for="meet-name">Meeting Name:</label>
+    </div>
+    <button class="btn waves-effect waves-light" id="create-meet">Create Meeting</button>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 <script src="popup.js"></script>
+<script>
+    // Initialize Materialize components
+    M.AutoInit();
+</script>
 </body>
 </html>
