@@ -36,13 +36,19 @@ function createGoogleMeet(meetingName, authuser) {
 function shortenUrl(request, url){
     const original_meet_url = url.split('?')[0]
     const meeting_name = url.split('meeting_name=')[1]
-    const short_api_url = `https://urlforwarding.api.godaddy.com/v1/?apikey=${API_KEY}&domain=${domain}&url=${original_meet_url}`
-    const body = new FormData()
-    body.append('code', meeting_name)
+    const short_api_url = `https://api.godaddy.com/v1/domains/${domain}/records/CNAME/${meeting_name}`
+    const body = JSON.stringify({
+        "data": original_meet_url,
+        "ttl": 600
+    })
     console.log(short_api_url)
 
     fetch(short_api_url, {
         method: "PUT",
+        headers: {
+            "Authorization": `sso-key ${API_KEY}`,
+            "Content-Type": "application/json"
+        },
         body: body
     }).then(res=>res.json())
         .then((short_url) =>{
