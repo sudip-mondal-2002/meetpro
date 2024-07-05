@@ -16,3 +16,18 @@ Open the extension, you'll be promted for 3 inputs
 - Create an issue or choose an existing issue, get it assigned to you.
 - Send an email to sudmondal2002@gmail.com mentioning your issue number that you need the API key.
 
+## Automated Deployment to Chrome Webstore
+
+This project uses GitHub Actions to automate the deployment process to the Chrome Webstore. The deployment workflow is defined in the `.github/workflows/deploy.yml` file.
+
+### Steps for Automated Deployment
+
+1. Ensure you have the necessary secrets set up in your GitHub repository:
+   - `CHROME_EXTENSION_CLIENT_ID`
+   - `CHROME_EXTENSION_CLIENT_SECRET`
+   - `CHROME_EXTENSION_REFRESH_TOKEN`
+   - `CHROME_EXTENSION_ID`
+
+2. Push your changes to the `main` branch. The GitHub Actions workflow will automatically build and deploy the extension to the Chrome Webstore.
+
+3. Monitor the Actions tab in your GitHub repository to check the status of the deployment.
