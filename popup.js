@@ -1,8 +1,8 @@
 const authuser = document.getElementById('authuser');
 const meeting_name = document.getElementById('meet-name');
+const domain = document.getElementById('domain');
 const apiKeyInput = document.getElementById('godaddy-api-key');
 
-// Event listener for creating a meeting
 document.getElementById('create-meet').addEventListener('click', function() {
     // send event to service worker
     chrome.runtime.sendMessage({action: "create-meet", authuser: authuser.value, meeting_name: meeting_name.value});
@@ -14,6 +14,10 @@ apiKeyInput.addEventListener('blur', function() {
     chrome.runtime.sendMessage({action: "set-api-key", apiKey: this.value});
 });
 
+domain.addEventListener('blur', function() {
+    // send event to service worker
+    chrome.runtime.sendMessage({action: "set-domain", domain: this.value});
+});
 // Additional event listeners for new interactive elements
 document.querySelectorAll('.interactive-element').forEach(item => {
     item.addEventListener('click', event => {

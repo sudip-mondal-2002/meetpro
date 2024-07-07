@@ -7,6 +7,8 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
         shortenUrl(request, sender.tab.url)
     } else if (request.action === 'set-api-key') {
         API_KEY = request.apiKey;
+    } else if (request.action === 'set-domain') {
+        domain = request.domain;
     }
     // Implement new background tasks as needed to support enhanced UX
 });
