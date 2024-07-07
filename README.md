@@ -24,12 +24,5 @@ Open the extension, you'll be promted for 3 inputs
 - Make sure to explore the new interactive elements added to the UI, such as form validation and dynamic content updates.
 - Utilize the enhanced styling to experience the extension in a more visually appealing way.
 
-### Showcasing the Upgraded UX
-
-For a visual guide on how to use these new features, refer to the screenshots and GIFs included below:
-
-![New UI Overview](link-to-screenshot)
-![Creating a Meeting](link-to-gif)
-
 - Create an issue or choose an existing issue, get it assigned to you.
 - Send an email to sudmondal2002@gmail.com mentioning your issue number that you need the API key.
