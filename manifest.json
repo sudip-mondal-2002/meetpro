@@ -3,7 +3,7 @@
   "name": "Google Meet Scheduler",
   "version": "1.0",
   "description": "Create and join Google Meet meetings directly from your browser.",
-  "permissions": ["identity", "identity.email", "scripting", "clipboardWrite"],
+  "permissions": ["clipboardWrite", "webRequest", "tabs"],
   "host_permissions": [
     "https://meet.google.com/*",
     "*://urlforwarding.api.godaddy.com/*"
@@ -14,5 +14,11 @@
   "action": {
     "default_popup": "popup.html"
   },
+  "web_accessible_resources": [
+    {
+      "resources": ["styles.css", "scripts/dynamicLoader.js"],
+      "matches": ["https://meet.google.com/*"]
+    }
+  ],
   "key": "cmnoebfnkhjabjkpdgmmdkfheigcoabh"
 }
