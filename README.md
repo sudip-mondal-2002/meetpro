@@ -5,12 +5,12 @@ Go to `chrome://extensions` or `edge://extensions` depending on your browser
 Turn on developer mode
 Click on Load unpacked
 Select the project folder
-Open the extension, you'll be promted for 4 inputs
-  - Godaddy API Key: You can generate one from [here](https://urlforwarding.api.godaddy.com/docs#/api-key/generateApiKey) or if you want to work with `meet.sudipmondal.co.in`, you can obtain it from me.
+Open the extension, you'll be promted for 3 inputs
+  - Godaddy API Key: You can generate one from [here](https://developer.godaddy.com/doc/endpoint/domains#/v1/recordAdd) or if you want to work with `meet.sudipmondal.co.in`, you can obtain it from me.
+    - If you work with your own API Key, update the domain name in `background.js` line no 2
     - API key is just a one time thing, you don't need to put it again
   - Authuser, for multiple google users(0 based index) in your browsers, you can choose which user will be the owner of the meet
-  - Meeting name: It's the suffix of the url. For example if you choose `john-doe` as meeting url, the meet will be `meet.sudipmondal.co.in/john-doe`.
-  - Domain Name: You can now add or change the domain name through the popup UI. If you work with your own API Key, you can set the domain name in the popup UI.
+  - Meeting name: It's the suffix of the url. For example if you choose `john-doe` as meeting url, the meet will be `john-doe.meet.sudipmondal.co.in`.
 
 
 ### New Features and UX Improvements
