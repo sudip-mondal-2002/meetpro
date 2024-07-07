@@ -14,12 +14,6 @@
   "action": {
     "default_popup": "popup.html"
   },
-  "content_scripts": [
-    {
-      "matches": ["https://meet.google.com/*"],
-      "js": ["contentScript.js"]
-    }
-  ],
   "web_accessible_resources": [
     {
       "resources": ["styles.css", "scripts/dynamicLoader.js"],
